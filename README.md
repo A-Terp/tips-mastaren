@@ -25,9 +25,9 @@ TipsMästaren är ett verktyg som hjälper till att analysera matcher i Stryktip
 ### Backend
 
 ```bash
-cd backend
-pip install -r requirements.txt
-python app.py
+cd tips-mastaren
+pip install -r backend/requirements.txt
+python3 backend/app.py
 ```
 
 ### Frontend
@@ -40,11 +40,34 @@ npm start
 
 ## Användning
 
-1. Starta backend-servern
-2. Starta frontend-applikationen
-3. Ange de aktuella matcherna i Stryktipset
-4. Välj budget och risknivå
-5. Få optimerade spelförslag
+1. **Förbered data**:
+   Placera CSV-filerna (`pl.csv` och `cs.csv`) i `/data`-katalogen
+
+2. **Träna modellen**:
+   ```bash
+   cd tips-mastaren
+   python3 backend/train_model.py
+   ```
+   Detta skapar en modell i `/models`-katalogen
+
+3. **Starta backend**:
+   ```bash
+   cd backend
+   python3 app.py
+   ```
+   
+4. **Starta frontend** (i ett nytt terminalfönster):
+   ```bash
+   cd frontend
+   npm install
+   npm start
+   ```
+
+5. **Använd appen**:
+   - Öppna webbläsaren på `http://localhost:3000`
+   - Ange matcher genom att fylla i lag och odds
+   - Justera budget och risknivå
+   - Klicka på "Generera prediktioner"
 
 ## Teknologier
 
