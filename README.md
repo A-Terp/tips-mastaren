@@ -26,7 +26,7 @@ TipsMästaren är ett verktyg som hjälper till att analysera matcher i Stryktip
 
 ```bash
 cd tips-mastaren
-pip install -r backend/requirements.txt
+pip3 install -r backend/requirements.txt
 python3 backend/app.py
 ```
 
